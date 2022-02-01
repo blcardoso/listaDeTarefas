@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Atividade } from "../Atividade";
 import Form from "../Formulário";
+import { Titulo } from "./style";
 
 export default function ListaAtividades() {
     const [atividades, setAtividade] = useState([]);
@@ -29,7 +30,7 @@ export default function ListaAtividades() {
     }
 
     const atualizarAtividade = (atividadeId:any, novoValor:any) => {
-        if (!novoValor.text || /^s*$/.test(novoValor.text)) {
+        if (!novoValor.text || /^\s*$/.test(novoValor.text)) {
             return;
         }
         //@ts-ignore
@@ -46,13 +47,14 @@ export default function ListaAtividades() {
 
     return (
         <div>
-            <h1>Atividades Diárias</h1>
+            <Titulo>Atividades Diárias</Titulo>
             <Form onSubmit={addAtividade} />
             <Atividade
                 atividades={atividades}
                 atividadeCompleta={atividadeCompleta}
                 deletarAtividade={deletarAtividade}
-                atualizarAtividade={atualizarAtividade} />
+                atualizarAtividade={atualizarAtividade}
+            />
         </div>
     )
 }
