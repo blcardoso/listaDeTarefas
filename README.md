@@ -6,6 +6,8 @@
 
 - Em seguida `yarn dev` para inicializar o projeto.
 
+- https://tarefasreact.vercel.app/
+
 ![Lista de Tarefas](https://i.ibb.co/1fZqnZz/lista-Tarefas.png)
 
 # Dependências
